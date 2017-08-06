@@ -12,11 +12,10 @@ encoding:    nil
 future:      true
 show_drafts: nil
 limit_posts: 0
-pygments: true
 
 permalink:     date
 paginate_path: 'page:num'
-paginate:      nil
+paginate:      10
 
 excerpt_separator: "\n\n"
 
