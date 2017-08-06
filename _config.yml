@@ -1,27 +1,22 @@
-source:      .
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-include:     ['.htaccess']
-exclude:     []
-keep_files:  ['.git','.svn']
-gems:        []
-timezone:    nil
-encoding:    nil
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+plugins: [jekyll-paginate]
 
-future:      true
-show_drafts: nil
-limit_posts: 0
+# Setup
+title:               Lanyon
+tagline:             'A Jekyll theme'
+description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 http://lanyon.getpoole.com
+baseurl:             ''
+paginate:            5
 
-permalink:     date
-paginate_path: 'page:num'
-paginate:      10
+# About/contact
+author:
+  name:              Mark Otto
+  url:               https://twitter.com/mdo
+  email:             markdotto@gmail.com
 
-excerpt_separator: "\n\n"
-
-safe:        false
-host:        0.0.0.0
-port:        4000
-baseurl:     /
-url:         http://localhost:4000
-lsi:         false
+# Custom vars
+version:             1.0.0
