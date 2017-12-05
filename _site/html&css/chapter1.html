@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Chapter1 &middot; Lanyon
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about">About</a>
+        
+      
+    
+      
+    
+
+    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+    <a class="sidebar-nav-item" href="">GitHub project</a>
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2017. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Lanyon</a>
+            <small>A Jekyll theme</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <h1 id="html">HTML</h1>
+
+<p>超文本标记语言(HTML)全称为HyperText Markup Language.</p>
+<ul>
+  <li>块元素:将内容显示,前后有换行</li>
+  <li>内联元素:在段落中</li>
+  <li>空元素:没有内容的元素,在开始标签中关闭的</li>
+  <li>嵌套:把一个元素放在另一个元素中</li>
+  <li>实体字符:&amp;lt表示’&lt;’,&amp;gt表示’&gt;’,需要’&amp;’符号时需要输入’&amp;amp’</li>
+</ul>
+
+<h2 id="內联元素标签">內联元素标签</h2>
+<ul>
+  <li>a:表示链接</li>
+  <li>p:表示段落</li>
+  <li>q:表示双引号</li>
+  <li>code:代码</li>
+  <li>em:强调</li>
+  <li>time:表示日期</li>
+  <li>strong:强调</li>
+  <li>pre:预格式化文本(保留空格和换行符)</li>
+</ul>
+
+<p>##空元素</p>
+<ul>
+  <li>br:表示换行</li>
+  <li>img:表示图片路径</li>
+</ul>
+
+<p>##块元素标签</p>
+<ul>
+  <li>h1-h6:表示字体大小</li>
+  <li>title:表示标题</li>
+  <li>body:表示文档内容</li>
+  <li>blockquote:创建文本块</li>
+  <li>ol:有序列表块(只能包含li标签)</li>
+  <li>ul:无序列表块(只能包含li标签)</li>
+  <li>li:列表项</li>
+</ul>
+
+<p>###关于链接</p>
+<ul>
+  <li>a标签用于创建一个超文本链接,链接到另一个web页面</li>
+  <li>a标签的内容会称为web页面中的可单机的文本</li>
+  <li>用href(Hypertext Reference)属性来指定链接的目标文件</li>
+</ul>
+
+<p><a href="http://localhost:4000/source/html&amp;css/head_first_lounge.html">example link</a></p>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

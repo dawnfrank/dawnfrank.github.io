@@ -4,7 +4,7 @@
  <title>Lanyon</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-08-06T23:32:11+08:00</updated>
+ <updated>2017-12-06T01:04:11+08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -13,10 +13,66 @@
 
  
  <entry>
+   <title>Chapter1</title>
+   <link href="http://localhost:4000/html&css/chapter1.html"/>
+   <updated>2017-12-04T00:00:00+08:00</updated>
+   <id>http://localhost:4000/html&css/chapter1</id>
+   <content type="html">&lt;h1 id=&quot;html&quot;&gt;HTML&lt;/h1&gt;
+
+&lt;p&gt;超文本标记语言(HTML)全称为HyperText Markup Language.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;块元素:将内容显示,前后有换行&lt;/li&gt;
+  &lt;li&gt;内联元素:在段落中&lt;/li&gt;
+  &lt;li&gt;空元素:没有内容的元素,在开始标签中关闭的&lt;/li&gt;
+  &lt;li&gt;嵌套:把一个元素放在另一个元素中&lt;/li&gt;
+  &lt;li&gt;实体字符:&amp;amp;lt表示’&amp;lt;’,&amp;amp;gt表示’&amp;gt;’,需要’&amp;amp;’符号时需要输入’&amp;amp;amp’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;內联元素标签&quot;&gt;內联元素标签&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;a:表示链接&lt;/li&gt;
+  &lt;li&gt;p:表示段落&lt;/li&gt;
+  &lt;li&gt;q:表示双引号&lt;/li&gt;
+  &lt;li&gt;code:代码&lt;/li&gt;
+  &lt;li&gt;em:强调&lt;/li&gt;
+  &lt;li&gt;time:表示日期&lt;/li&gt;
+  &lt;li&gt;strong:强调&lt;/li&gt;
+  &lt;li&gt;pre:预格式化文本(保留空格和换行符)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##空元素&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;br:表示换行&lt;/li&gt;
+  &lt;li&gt;img:表示图片路径&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##块元素标签&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;h1-h6:表示字体大小&lt;/li&gt;
+  &lt;li&gt;title:表示标题&lt;/li&gt;
+  &lt;li&gt;body:表示文档内容&lt;/li&gt;
+  &lt;li&gt;blockquote:创建文本块&lt;/li&gt;
+  &lt;li&gt;ol:有序列表块(只能包含li标签)&lt;/li&gt;
+  &lt;li&gt;ul:无序列表块(只能包含li标签)&lt;/li&gt;
+  &lt;li&gt;li:列表项&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;###关于链接&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a标签用于创建一个超文本链接,链接到另一个web页面&lt;/li&gt;
+  &lt;li&gt;a标签的内容会称为web页面中的可单机的文本&lt;/li&gt;
+  &lt;li&gt;用href(Hypertext Reference)属性来指定链接的目标文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/source/html&amp;amp;css/head_first_lounge.html&quot;&gt;example link&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Introducing Lanyon</title>
-   <link href="http://localhost:4000/2014/01/02/introducing-lanyon/"/>
+   <link href="http://localhost:4000/test/introducing-lanyon.html"/>
    <updated>2014-01-02T00:00:00+08:00</updated>
-   <id>http://localhost:4000/2014/01/02/introducing-lanyon</id>
+   <id>http://localhost:4000/test/introducing-lanyon</id>
    <content type="html">&lt;p&gt;Lanyon is an unassuming &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that places content first by tucking away navigation in a hidden drawer. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
 
 &lt;h3 id=&quot;built-on-poole&quot;&gt;Built on Poole&lt;/h3&gt;
@@ -59,9 +115,9 @@
  
  <entry>
    <title>Example content</title>
-   <link href="http://localhost:4000/2014/01/01/example-content/"/>
+   <link href="http://localhost:4000/test/example-content.html"/>
    <updated>2014-01-01T00:00:00+08:00</updated>
-   <id>http://localhost:4000/2014/01/01/example-content</id>
+   <id>http://localhost:4000/test/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
@@ -189,9 +245,9 @@
  
  <entry>
    <title>What's Jekyll?</title>
-   <link href="http://localhost:4000/2013/12/31/whats-jekyll/"/>
+   <link href="http://localhost:4000/test/whats-jekyll.html"/>
    <updated>2013-12-31T00:00:00+08:00</updated>
-   <id>http://localhost:4000/2013/12/31/whats-jekyll</id>
+   <id>http://localhost:4000/test/whats-jekyll</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;

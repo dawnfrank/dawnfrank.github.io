@@ -1,8 +1,19 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink:           /:categories/:title.html
 plugins: [jekyll-paginate]
+
+source: '.'
+destination: '_site'
+collections_dir: '.'
+plugins_dir: '_plugins'
+layouts_dir: '_layouts'
+data_dir: '_data'
+includes_dir: '_includes'
+
+#timezone:			'Asia/Chongqing'
+encoding:           'utf-8'
 
 # Setup
 title:               Lanyon
@@ -11,6 +22,9 @@ description:         'A reserved <a href="http://jekyllrb.com" target="_blank">J
 url:                 http://lanyon.getpoole.com
 baseurl:             ''
 paginate:            5
+
+markdown: kramdown
+highlighter: rouge
 
 # About/contact
 author:
