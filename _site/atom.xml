@@ -4,7 +4,7 @@
  <title>Lanyon</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-06T01:04:11+08:00</updated>
+ <updated>2017-12-07T02:25:30+08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -13,10 +13,164 @@
 
  
  <entry>
-   <title>Chapter1</title>
-   <link href="http://localhost:4000/html&css/chapter1.html"/>
+   <title>css</title>
+   <link href="http://localhost:4000/html&css/css.html"/>
+   <updated>2017-12-07T00:00:00+08:00</updated>
+   <id>http://localhost:4000/html&css/css</id>
+   <content type="html">&lt;p&gt;#CSS&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;style样式需要指定使用范围(h1/h2/p)&lt;/li&gt;
+  &lt;li&gt;使用/* */来表示注释&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##查找样式&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;css中匹配的类选择器&lt;/li&gt;
+  &lt;li&gt;查看父类的类选择器&lt;/li&gt;
+  &lt;li&gt;使用默认值&lt;/li&gt;
+  &lt;li&gt;存在多个个规则时,更加特定的规则会被执行&lt;/li&gt;
+  &lt;li&gt;同样优先级规则时,看&lt;strong&gt;css文件中靠后的&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##Style样式&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;color:字体颜色&lt;/li&gt;
+  &lt;li&gt;background-color:背景色&lt;/li&gt;
+  &lt;li&gt;background-image:背景图&lt;/li&gt;
+  &lt;li&gt;font-family:字体&lt;/li&gt;
+  &lt;li&gt;font-size:字体大小(px/%/em/xx-small/x-small/small/medium/large/x-large/xx-large)&lt;/li&gt;
+  &lt;li&gt;font-weight:字体粗细&lt;/li&gt;
+  &lt;li&gt;font-style:是否斜体(italic/oblique)&lt;/li&gt;
+  &lt;li&gt;border:边框&lt;/li&gt;
+  &lt;li&gt;border-bottom:下划线&lt;/li&gt;
+  &lt;li&gt;left/right/top/bottom:指定左/右/上/下所在的位置&lt;/li&gt;
+  &lt;li&gt;line-height:行间距&lt;/li&gt;
+  &lt;li&gt;padding:内边距&lt;/li&gt;
+  &lt;li&gt;text-align:文本对齐(left/right/center)&lt;/li&gt;
+  &lt;li&gt;test-decoration:增加风格&lt;/li&gt;
+  &lt;li&gt;letter-spacing:字母间距&lt;/li&gt;
+  &lt;li&gt;list-style:列表外观&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##类选择器&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;html中使用class属性来指定类选择器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../source/html&amp;amp;css/class_selector.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;##关于颜色
+支持了16中标准颜色,其他需要用16进制来表示&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;aqua&quot;&gt;aqua(水绿)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;black&quot;&gt;black(黑)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;blue&quot;&gt;blue(蓝)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;fuchsia&quot;&gt;fuchsia(紫红)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;gray&quot;&gt;gray(灰)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;green&quot;&gt;green(绿)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;lime&quot;&gt;lime(浅绿)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;maroon&quot;&gt;maroon(褐)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;navy&quot;&gt;navy(深蓝)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;olive&quot;&gt;olive(橄榄)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;purple&quot;&gt;purple(紫)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;red&quot;&gt;red(红)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;silver&quot;&gt;silver(银)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;teal&quot;&gt;teal(深青)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;white&quot;&gt;white(白)&lt;/font&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;font color=&quot;yellow&quot;&gt;yellow(黄)&lt;/font&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于粗细:
+有四种粗细表示程度,默认为normal
+&lt;img src=&quot;../../source/html&amp;amp;css/font_weight.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;##关于文本装饰器:
+有四种文本风格程度,默认为none,可以同时指定多个,(overline为上划线)
+&lt;img src=&quot;../../source/html&amp;amp;css/text_decoration.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;##关于字体规范
+每个字体规范中都是字体的表现形式,多个字体使用逗号隔开,系统依次选择&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sans_serif:没有衬线的字体,外观清晰,计算机易识&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/sans_serif.png)
+&lt;div&gt;
+  * serif:有衬线的字体,高雅传统,可读性好,适合新闻报纸的排版
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/serif.png)
+&lt;div&gt;
+  * monospace:固定宽度的字,类似打字机打出来的
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/monospace.png)
+&lt;div&gt;
+  * cursive:类似手写的字,有趣味/有风格
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/cursive.png)
+&lt;div&gt;
+  * cursive:包含某种风格,有趣味/有风格
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/fantasy.png)
+&lt;div&gt;
+
+##字体格式
+  * ttf:TrueType是Apple公司和Microsoft公司共同推出的字体文件格式
+  * otf:OpenType是ttf的超集
+  * woff:在ttf基础上的web字体标准
+  * svg:Soalable Vector Graphics是图像格式字体
+  * eot:OpenType的压缩形式
+
+##web字体
+  * css中使用@font-face规则,内置css规则
+  * 使用font-family来建立字体名
+  * 使用src属性指明字体路径 src:url(&quot;xxx.ttf&quot;),url(&quot;xxx.woff&quot;)
+  * 在css中指定建立的字体
+
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/font_face.png)
+&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>html</title>
+   <link href="http://localhost:4000/html&css/html.html"/>
    <updated>2017-12-04T00:00:00+08:00</updated>
-   <id>http://localhost:4000/html&css/chapter1</id>
+   <id>http://localhost:4000/html&css/html</id>
    <content type="html">&lt;h1 id=&quot;html&quot;&gt;HTML&lt;/h1&gt;
 
 &lt;p&gt;超文本标记语言(HTML)全称为HyperText Markup Language.&lt;/p&gt;
@@ -26,6 +180,7 @@
   &lt;li&gt;空元素:没有内容的元素,在开始标签中关闭的&lt;/li&gt;
   &lt;li&gt;嵌套:把一个元素放在另一个元素中&lt;/li&gt;
   &lt;li&gt;实体字符:&amp;amp;lt表示’&amp;lt;’,&amp;amp;gt表示’&amp;gt;’,需要’&amp;amp;’符号时需要输入’&amp;amp;amp’&lt;/li&gt;
+  &lt;li&gt;文档类型定义:使用&amp;lt;!doctype html&amp;gt;来表示页面为html类型&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;內联元素标签&quot;&gt;內联元素标签&lt;/h2&gt;
@@ -38,18 +193,23 @@
   &lt;li&gt;time:表示日期&lt;/li&gt;
   &lt;li&gt;strong:强调&lt;/li&gt;
   &lt;li&gt;pre:预格式化文本(保留空格和换行符)&lt;/li&gt;
+  &lt;li&gt;style:增加css样式&lt;/li&gt;
+  &lt;li&gt;link:链接&lt;/li&gt;
+  &lt;li&gt;del/ins:删除线&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;##空元素&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;br:表示换行&lt;/li&gt;
   &lt;li&gt;img:表示图片路径&lt;/li&gt;
+  &lt;li&gt;meta:元数据&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;##块元素标签&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;h1-h6:表示字体大小&lt;/li&gt;
   &lt;li&gt;title:表示标题&lt;/li&gt;
+  &lt;li&gt;head:表示文档头(必须包含title)&lt;/li&gt;
   &lt;li&gt;body:表示文档内容&lt;/li&gt;
   &lt;li&gt;blockquote:创建文本块&lt;/li&gt;
   &lt;li&gt;ol:有序列表块(只能包含li标签)&lt;/li&gt;
@@ -57,14 +217,40 @@
   &lt;li&gt;li:列表项&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;###关于链接&lt;/p&gt;
+&lt;p&gt;##关于链接&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;a标签用于创建一个超文本链接,链接到另一个web页面&lt;/li&gt;
   &lt;li&gt;a标签的内容会称为web页面中的可单机的文本&lt;/li&gt;
   &lt;li&gt;用href(Hypertext Reference)属性来指定链接的目标文件&lt;/li&gt;
+  &lt;li&gt;用id属性标识元素,id必须唯一&lt;/li&gt;
+  &lt;li&gt;href在网址后可以加入#id(/#id)来链接到页面id属性的位置&lt;/li&gt;
+  &lt;li&gt;title属性为所链接页面的文本描述&lt;/li&gt;
+  &lt;li&gt;target属性打开不同的窗口&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://localhost:4000/source/html&amp;amp;css/head_first_lounge.html&quot;&gt;example link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;##关于图像&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;alt属性来指定描述图像的一些文本&lt;/li&gt;
+  &lt;li&gt;height属性来指定高度&lt;/li&gt;
+  &lt;li&gt;width属性来指定宽度&lt;/li&gt;
+  &lt;li&gt;即使用height/width属性改变图片大小,网页仍需线加载原始图片，&lt;strong&gt;尽量让图片大小一开始就适合网页&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于meta&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用charaset表示编码方式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于Link:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;type表示链接的类型
+    &lt;ul&gt;
+      &lt;li&gt;“text/css”为css文件&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;href为链接&lt;/li&gt;
+  &lt;li&gt;rel指明链接文档为一个样式表&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  

@@ -11,7 +11,7 @@
 
   <title>
     
-      Chapter1 &middot; Lanyon
+      html &middot; Lanyon
     
   </title>
 
@@ -101,6 +101,7 @@
   <li>空元素:没有内容的元素,在开始标签中关闭的</li>
   <li>嵌套:把一个元素放在另一个元素中</li>
   <li>实体字符:&amp;lt表示’&lt;’,&amp;gt表示’&gt;’,需要’&amp;’符号时需要输入’&amp;amp’</li>
+  <li>文档类型定义:使用&lt;!doctype html&gt;来表示页面为html类型</li>
 </ul>
 
 <h2 id="內联元素标签">內联元素标签</h2>
@@ -113,18 +114,23 @@
   <li>time:表示日期</li>
   <li>strong:强调</li>
   <li>pre:预格式化文本(保留空格和换行符)</li>
+  <li>style:增加css样式</li>
+  <li>link:链接</li>
+  <li>del/ins:删除线</li>
 </ul>
 
 <p>##空元素</p>
 <ul>
   <li>br:表示换行</li>
   <li>img:表示图片路径</li>
+  <li>meta:元数据</li>
 </ul>
 
 <p>##块元素标签</p>
 <ul>
   <li>h1-h6:表示字体大小</li>
   <li>title:表示标题</li>
+  <li>head:表示文档头(必须包含title)</li>
   <li>body:表示文档内容</li>
   <li>blockquote:创建文本块</li>
   <li>ol:有序列表块(只能包含li标签)</li>
@@ -132,14 +138,40 @@
   <li>li:列表项</li>
 </ul>
 
-<p>###关于链接</p>
+<p>##关于链接</p>
 <ul>
   <li>a标签用于创建一个超文本链接,链接到另一个web页面</li>
   <li>a标签的内容会称为web页面中的可单机的文本</li>
   <li>用href(Hypertext Reference)属性来指定链接的目标文件</li>
+  <li>用id属性标识元素,id必须唯一</li>
+  <li>href在网址后可以加入#id(/#id)来链接到页面id属性的位置</li>
+  <li>title属性为所链接页面的文本描述</li>
+  <li>target属性打开不同的窗口</li>
 </ul>
 
-<p><a href="http://localhost:4000/source/html&amp;css/head_first_lounge.html">example link</a></p>
+<p>##关于图像</p>
+<ul>
+  <li>alt属性来指定描述图像的一些文本</li>
+  <li>height属性来指定高度</li>
+  <li>width属性来指定宽度</li>
+  <li>即使用height/width属性改变图片大小,网页仍需线加载原始图片，<strong>尽量让图片大小一开始就适合网页</strong></li>
+</ul>
+
+<p>##关于meta</p>
+<ul>
+  <li>使用charaset表示编码方式</li>
+</ul>
+
+<p>##关于Link:</p>
+<ul>
+  <li>type表示链接的类型
+    <ul>
+      <li>“text/css”为css文件</li>
+    </ul>
+  </li>
+  <li>href为链接</li>
+  <li>rel指明链接文档为一个样式表</li>
+</ul>
 
       </div>
     </div>
