@@ -94,8 +94,11 @@
       <div class="container content">
         <p>#CSS</p>
 <ul>
-  <li>style样式需要指定使用范围(h1/h2/p)</li>
+  <li>style样式需要指定使用范围(./h1/h2/p)</li>
   <li>使用/* */来表示注释</li>
+  <li>用字符’#’来表示id</li>
+  <li>用字符’.’来表示类</li>
+  <li>多个样式表从上到下排列,越下面越优先</li>
 </ul>
 
 <p>##查找样式</p>
@@ -125,6 +128,13 @@
   <li>test-decoration:增加风格</li>
   <li>letter-spacing:字母间距</li>
   <li>list-style:列表外观</li>
+  <li>background-image:背景图</li>
+  <li>background-repeat:是否重复(repeat/repeat-x/repeat-y/no-repeat/inherit)</li>
+  <li>background-position:背景位置</li>
+  <li>float:悬浮位置(left/right)</li>
+  <li>clear:指定位置不允许有悬浮内容</li>
+  <li>position:位置属性(fixed/static/relative/absoulte)</li>
+  <li>diaplay:布局方式(table)</li>
 </ul>
 
 <p>##类选择器</p>
@@ -236,8 +246,91 @@
 
 <div align="center">
 ![](../../source/html&amp;css/font_face.png)
-<div>
-</div></div></div></div></div></div></div></div></div></div></div></div>
+</div>
+
+##盒模型
+  * css中元素都被当作盒模型来看待
+  * 从内到外为:content area/padding/border/margin
+  * 内容区(content area):包含的是主要内容,width属性只会影响此区域大小
+  * 内边距(padding):边框和主体的剧,**会继承内容区的颜色样式**
+  * 边框(border):边框长度
+  * 外边距(margin):边框距外的距离
+
+<div align="center">
+![](../../source/html&amp;css/box_model.png)
+</div>
+
+##边框样式
+  * solid:实线
+  * double:双实线
+  * groove:槽线
+  * outset:外凸
+  * dotted:虚线
+  * dashed:破折线
+  * inset:内凹
+  * rigid:脊线
+
+<div align="center">
+![](../../source/html&amp;css/border_style.png)
+![](../../source/html&amp;css/border_radius.png)
+</div>
+
+
+##媒体
+  * css中使用@media来表示媒体(后面接print/screen等各类媒体)
+  * 可以通过(min-device-width/max-device-width)获取页面信息
+  * print:打印机
+  * screen:窗口
+  * min-device-width:页面最小宽度
+  * max-device-width:
+
+##层叠
+  * 作者&gt;读者&gt;浏览器
+  * id&gt;类/伪类&gt;元素名
+  * css中定义顺序:定义后&gt;定义前
+
+##布局
+  * 浏览器使用流在页面中放置元素
+  * 块元素从上向下流,各元素之间有一个换行.默认每个快元素会占整个窗口的宽度
+  * 內联元素块元素内部从左上方流向右下方.在垂直方向上扩展来包含这些块元素
+  * 流体布局:float
+    * 从正常流中取出,浮到左边或者右边
+    * 无法创建两个相同高度的列
+    * 使用clear来指定块元素的左/右不能有浮动元素,浮动元素会下移
+    * 浮动元素必须有宽度且不能为auto
+  * 冻结布局:设置固定的width
+  * 凝胶布局:auto
+    * 不会填满整个页面(很多blog采用此布局)
+    * 内容宽度是固定的,外边距会随着浏览器窗口扩展或收缩
+    * 通常把内容放在中央
+  * 绝对定位布局:position
+    * 使用top/bottom/right/left来指定元素的位置
+    * 使用fixed/static/relative/absoulte来指定位置属性
+    * 使用z-index来分层
+  * 表格显示布局:table
+ 
+
+##css表格
+  * 是一种布局的方式
+  * 使用多个嵌套的display标签来完成多行的行为
+  * boder来设置边框
+  * vertial-align:设置垂直对齐方式(top/middle/bottom)
+  * padding来设置边距
+  * display来设置行列(table-row/table-column)
+  * first-child表示第一个元素
+
+##html表格
+  * 一种处理数据方式
+  * caption-side:指定标题的位置(top/bottom/left/right)\
+  * border:表格的边框属性
+  * border-collapse:是否折叠(separate/collapse)
+  * border-spacing:边框空隙
+
+##display:
+  * block:区块
+  * table:表格
+  * inline:內联(没有回车)
+</div></div></div></div></div></div></div></div></div></div>
 
       </div>
     </div>

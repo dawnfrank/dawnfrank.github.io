@@ -102,6 +102,7 @@
   <li>嵌套:把一个元素放在另一个元素中</li>
   <li>实体字符:&amp;lt表示’&lt;’,&amp;gt表示’&gt;’,需要’&amp;’符号时需要输入’&amp;amp’</li>
   <li>文档类型定义:使用&lt;!doctype html&gt;来表示页面为html类型</li>
+  <li>使用id来展示唯一标识</li>
 </ul>
 
 <h2 id="內联元素标签">內联元素标签</h2>
@@ -138,23 +139,60 @@
   <li>li:列表项</li>
 </ul>
 
+<p>##html5新元素</p>
+<ul>
+  <li>header:对主页的介绍</li>
+  <li>footer:对页脚的介绍</li>
+  <li>artical：独立的自包含内容(主要内容)</li>
+  <li>aside:artical以外的内容</li>
+  <li>nav:导航菜单</li>
+  <li>section:相同内容的区块(类似div)</li>
+  <li>article:区块中的元素</li>
+  <li>time:使用datetime来指定时间</li>
+  <li>vedio:使用vedio来表示视频</li>
+  <li>audio:包含音频</li>
+  <li>process:进度条</li>
+  <li>mark:用于突出某些文本</li>
+  <li>meter:范围的量度(0-100)</li>
+  <li>canvas:javascript绘制的图像和动画</li>
+  <li>figure:定义照片、图表、代码等独立内容</li>
+  <li>form:表单</li>
+</ul>
+
 <p>##关于链接</p>
 <ul>
   <li>a标签用于创建一个超文本链接,链接到另一个web页面</li>
   <li>a标签的内容会称为web页面中的可单机的文本</li>
-  <li>用href(Hypertext Reference)属性来指定链接的目标文件</li>
-  <li>用id属性标识元素,id必须唯一</li>
+  <li>href(Hypertext Reference)属性来指定链接的目标文件</li>
+  <li>id属性标识元素,id必须唯一</li>
   <li>href在网址后可以加入#id(/#id)来链接到页面id属性的位置</li>
   <li>title属性为所链接页面的文本描述</li>
   <li>target属性打开不同的窗口</li>
+  <li>使用url来表示相对路径</li>
+  <li>media表示媒体(screen/print)</li>
+  <li>link表示为访问的链接</li>
+  <li>visited表示已访问的链接</li>
+  <li>hover表示鼠标悬停</li>
+  <li>focus表示焦点上(访问这个链接时/tab)</li>
+  <li>active表示第一次单击一个链接</li>
 </ul>
 
 <p>##关于图像</p>
 <ul>
   <li>alt属性来指定描述图像的一些文本</li>
   <li>height属性来指定高度</li>
-  <li>width属性来指定宽度</li>
+  <li>width属性来指定<strong>内容区</strong>宽度</li>
   <li>即使用height/width属性改变图片大小,网页仍需线加载原始图片，<strong>尽量让图片大小一开始就适合网页</strong></li>
+</ul>
+
+<p>##关于视频</p>
+<ul>
+  <li>autoplay属性来决定是否播放</li>
+  <li>controls提供暂停/开始等控制选项</li>
+  <li>poster提供一张海报(视频播放之前的显示)</li>
+  <li>loop:是否循环播放</li>
+  <li>src:资源地址</li>
+  <li>type:指定解码格式</li>
 </ul>
 
 <p>##关于meta</p>
@@ -171,6 +209,85 @@
   </li>
   <li>href为链接</li>
   <li>rel指明链接文档为一个样式表</li>
+</ul>
+
+<p>##关于逻辑区(容器)</p>
+<ul>
+  <li>div,是一个快元素</li>
+  <li>span,是一个內联元素</li>
+  <li>使用id属性来指定逻辑区的逻辑名</li>
+  <li>逻辑区可以嵌套</li>
+</ul>
+
+<p>##关于列表:</p>
+<ul>
+  <li>list-style-type:设置不同的列表样式
+    <ul>
+      <li>disc:默认,实心圆</li>
+      <li>cirle:空心圆</li>
+      <li>square:实心方块</li>
+      <li>decimal:数字</li>
+      <li>decimal-leading-zero:零开头的数字</li>
+      <li>lower-roman:小写罗马字母</li>
+      <li>upper-roman:大写罗马字母</li>
+      <li>lower-alpha:小写英文字母</li>
+      <li>upper-aloha:大写英文字母</li>
+      <li>lower-greek:小写希腊字母</li>
+      <li>lower-latin:小写拉丁字母</li>
+      <li>upper-greek:大写拉丁字母</li>
+      <li>none:木有编号</li>
+    </ul>
+  </li>
+  <li>list-style-image:使用指定的图片</li>
+  <li>list-style-position:指定序号在内部还是外部(inside/outside)</li>
+</ul>
+
+<p>##关于表格</p>
+<ul>
+  <li>使用table标签来指定表格</li>
+  <li>caption属性为表格的标题</li>
+  <li>tr属性为表格的一行</li>
+  <li>th属性为每一列的表头</li>
+  <li>td属性为单元格,包含表格数据,每个单元格都是独立一列</li>
+  <li>rowspan:跨越多行</li>
+  <li>colspan:跨越多列</li>
+  <li>使用nth-child(even/odd)伪类增加间隔背景色</li>
+</ul>
+
+<p>##关于表单</p>
+<ul>
+  <li>action:包含web服务的url</li>
+  <li>method:确定表单发送到服务器的方式(POST/GET)
+    <ul>
+      <li>POST:表单数据作为请求的一部分发送,对用户不可见</li>
+      <li>GET:表单数据追加到url后面,用户可见</li>
+    </ul>
+  </li>
+  <li>input:不同type表示不同类型的输入方式
+    <ul>
+      <li>text:单行文本输入框</li>
+      <li>submit:按钮</li>
+      <li>radio:单选钮</li>
+      <li>checkbox:复选框</li>
+      <li>textarea:文本输入</li>
+      <li>select:菜单(multipe)</li>
+      <li>option:菜单项</li>
+      <li>number:数字输入</li>
+      <li>range:滑动条</li>
+      <li>color:颜色选择</li>
+      <li>date:日期输入</li>
+      <li>email:邮件输入</li>
+      <li>tel:电话输入</li>
+      <li>url:链接输入</li>
+      <li>file:文件</li>
+    </ul>
+  </li>
+  <li>legend:提供一组元素</li>
+  <li>filedset:也是一组元素</li>
+  <li>passwords:密码框</li>
+  <li>placeholder:默认文本</li>
+  <li>Required:必须要填写的输入域</li>
+  <li>label可以提高访问性</li>
 </ul>
 
       </div>

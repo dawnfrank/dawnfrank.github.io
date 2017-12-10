@@ -4,7 +4,7 @@
  <title>Lanyon</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-07T02:25:30+08:00</updated>
+ <updated>2017-12-11T01:04:21+08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -19,8 +19,11 @@
    <id>http://localhost:4000/html&css/css</id>
    <content type="html">&lt;p&gt;#CSS&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;style样式需要指定使用范围(h1/h2/p)&lt;/li&gt;
+  &lt;li&gt;style样式需要指定使用范围(./h1/h2/p)&lt;/li&gt;
   &lt;li&gt;使用/* */来表示注释&lt;/li&gt;
+  &lt;li&gt;用字符’#’来表示id&lt;/li&gt;
+  &lt;li&gt;用字符’.’来表示类&lt;/li&gt;
+  &lt;li&gt;多个样式表从上到下排列,越下面越优先&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;##查找样式&lt;/p&gt;
@@ -50,6 +53,13 @@
   &lt;li&gt;test-decoration:增加风格&lt;/li&gt;
   &lt;li&gt;letter-spacing:字母间距&lt;/li&gt;
   &lt;li&gt;list-style:列表外观&lt;/li&gt;
+  &lt;li&gt;background-image:背景图&lt;/li&gt;
+  &lt;li&gt;background-repeat:是否重复(repeat/repeat-x/repeat-y/no-repeat/inherit)&lt;/li&gt;
+  &lt;li&gt;background-position:背景位置&lt;/li&gt;
+  &lt;li&gt;float:悬浮位置(left/right)&lt;/li&gt;
+  &lt;li&gt;clear:指定位置不允许有悬浮内容&lt;/li&gt;
+  &lt;li&gt;position:位置属性(fixed/static/relative/absoulte)&lt;/li&gt;
+  &lt;li&gt;diaplay:布局方式(table)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;##类选择器&lt;/p&gt;
@@ -161,8 +171,91 @@
 
 &lt;div align=&quot;center&quot;&gt;
 ![](../../source/html&amp;amp;css/font_face.png)
-&lt;div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+##盒模型
+  * css中元素都被当作盒模型来看待
+  * 从内到外为:content area/padding/border/margin
+  * 内容区(content area):包含的是主要内容,width属性只会影响此区域大小
+  * 内边距(padding):边框和主体的剧,**会继承内容区的颜色样式**
+  * 边框(border):边框长度
+  * 外边距(margin):边框距外的距离
+
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/box_model.png)
+&lt;/div&gt;
+
+##边框样式
+  * solid:实线
+  * double:双实线
+  * groove:槽线
+  * outset:外凸
+  * dotted:虚线
+  * dashed:破折线
+  * inset:内凹
+  * rigid:脊线
+
+&lt;div align=&quot;center&quot;&gt;
+![](../../source/html&amp;amp;css/border_style.png)
+![](../../source/html&amp;amp;css/border_radius.png)
+&lt;/div&gt;
+
+
+##媒体
+  * css中使用@media来表示媒体(后面接print/screen等各类媒体)
+  * 可以通过(min-device-width/max-device-width)获取页面信息
+  * print:打印机
+  * screen:窗口
+  * min-device-width:页面最小宽度
+  * max-device-width:
+
+##层叠
+  * 作者&amp;gt;读者&amp;gt;浏览器
+  * id&amp;gt;类/伪类&amp;gt;元素名
+  * css中定义顺序:定义后&amp;gt;定义前
+
+##布局
+  * 浏览器使用流在页面中放置元素
+  * 块元素从上向下流,各元素之间有一个换行.默认每个快元素会占整个窗口的宽度
+  * 內联元素块元素内部从左上方流向右下方.在垂直方向上扩展来包含这些块元素
+  * 流体布局:float
+    * 从正常流中取出,浮到左边或者右边
+    * 无法创建两个相同高度的列
+    * 使用clear来指定块元素的左/右不能有浮动元素,浮动元素会下移
+    * 浮动元素必须有宽度且不能为auto
+  * 冻结布局:设置固定的width
+  * 凝胶布局:auto
+    * 不会填满整个页面(很多blog采用此布局)
+    * 内容宽度是固定的,外边距会随着浏览器窗口扩展或收缩
+    * 通常把内容放在中央
+  * 绝对定位布局:position
+    * 使用top/bottom/right/left来指定元素的位置
+    * 使用fixed/static/relative/absoulte来指定位置属性
+    * 使用z-index来分层
+  * 表格显示布局:table
+ 
+
+##css表格
+  * 是一种布局的方式
+  * 使用多个嵌套的display标签来完成多行的行为
+  * boder来设置边框
+  * vertial-align:设置垂直对齐方式(top/middle/bottom)
+  * padding来设置边距
+  * display来设置行列(table-row/table-column)
+  * first-child表示第一个元素
+
+##html表格
+  * 一种处理数据方式
+  * caption-side:指定标题的位置(top/bottom/left/right)\
+  * border:表格的边框属性
+  * border-collapse:是否折叠(separate/collapse)
+  * border-spacing:边框空隙
+
+##display:
+  * block:区块
+  * table:表格
+  * inline:內联(没有回车)
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
  
@@ -181,6 +274,7 @@
   &lt;li&gt;嵌套:把一个元素放在另一个元素中&lt;/li&gt;
   &lt;li&gt;实体字符:&amp;amp;lt表示’&amp;lt;’,&amp;amp;gt表示’&amp;gt;’,需要’&amp;amp;’符号时需要输入’&amp;amp;amp’&lt;/li&gt;
   &lt;li&gt;文档类型定义:使用&amp;lt;!doctype html&amp;gt;来表示页面为html类型&lt;/li&gt;
+  &lt;li&gt;使用id来展示唯一标识&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;內联元素标签&quot;&gt;內联元素标签&lt;/h2&gt;
@@ -217,23 +311,60 @@
   &lt;li&gt;li:列表项&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;##html5新元素&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;header:对主页的介绍&lt;/li&gt;
+  &lt;li&gt;footer:对页脚的介绍&lt;/li&gt;
+  &lt;li&gt;artical：独立的自包含内容(主要内容)&lt;/li&gt;
+  &lt;li&gt;aside:artical以外的内容&lt;/li&gt;
+  &lt;li&gt;nav:导航菜单&lt;/li&gt;
+  &lt;li&gt;section:相同内容的区块(类似div)&lt;/li&gt;
+  &lt;li&gt;article:区块中的元素&lt;/li&gt;
+  &lt;li&gt;time:使用datetime来指定时间&lt;/li&gt;
+  &lt;li&gt;vedio:使用vedio来表示视频&lt;/li&gt;
+  &lt;li&gt;audio:包含音频&lt;/li&gt;
+  &lt;li&gt;process:进度条&lt;/li&gt;
+  &lt;li&gt;mark:用于突出某些文本&lt;/li&gt;
+  &lt;li&gt;meter:范围的量度(0-100)&lt;/li&gt;
+  &lt;li&gt;canvas:javascript绘制的图像和动画&lt;/li&gt;
+  &lt;li&gt;figure:定义照片、图表、代码等独立内容&lt;/li&gt;
+  &lt;li&gt;form:表单&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;##关于链接&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;a标签用于创建一个超文本链接,链接到另一个web页面&lt;/li&gt;
   &lt;li&gt;a标签的内容会称为web页面中的可单机的文本&lt;/li&gt;
-  &lt;li&gt;用href(Hypertext Reference)属性来指定链接的目标文件&lt;/li&gt;
-  &lt;li&gt;用id属性标识元素,id必须唯一&lt;/li&gt;
+  &lt;li&gt;href(Hypertext Reference)属性来指定链接的目标文件&lt;/li&gt;
+  &lt;li&gt;id属性标识元素,id必须唯一&lt;/li&gt;
   &lt;li&gt;href在网址后可以加入#id(/#id)来链接到页面id属性的位置&lt;/li&gt;
   &lt;li&gt;title属性为所链接页面的文本描述&lt;/li&gt;
   &lt;li&gt;target属性打开不同的窗口&lt;/li&gt;
+  &lt;li&gt;使用url来表示相对路径&lt;/li&gt;
+  &lt;li&gt;media表示媒体(screen/print)&lt;/li&gt;
+  &lt;li&gt;link表示为访问的链接&lt;/li&gt;
+  &lt;li&gt;visited表示已访问的链接&lt;/li&gt;
+  &lt;li&gt;hover表示鼠标悬停&lt;/li&gt;
+  &lt;li&gt;focus表示焦点上(访问这个链接时/tab)&lt;/li&gt;
+  &lt;li&gt;active表示第一次单击一个链接&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;##关于图像&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;alt属性来指定描述图像的一些文本&lt;/li&gt;
   &lt;li&gt;height属性来指定高度&lt;/li&gt;
-  &lt;li&gt;width属性来指定宽度&lt;/li&gt;
+  &lt;li&gt;width属性来指定&lt;strong&gt;内容区&lt;/strong&gt;宽度&lt;/li&gt;
   &lt;li&gt;即使用height/width属性改变图片大小,网页仍需线加载原始图片，&lt;strong&gt;尽量让图片大小一开始就适合网页&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于视频&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;autoplay属性来决定是否播放&lt;/li&gt;
+  &lt;li&gt;controls提供暂停/开始等控制选项&lt;/li&gt;
+  &lt;li&gt;poster提供一张海报(视频播放之前的显示)&lt;/li&gt;
+  &lt;li&gt;loop:是否循环播放&lt;/li&gt;
+  &lt;li&gt;src:资源地址&lt;/li&gt;
+  &lt;li&gt;type:指定解码格式&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;##关于meta&lt;/p&gt;
@@ -250,6 +381,85 @@
   &lt;/li&gt;
   &lt;li&gt;href为链接&lt;/li&gt;
   &lt;li&gt;rel指明链接文档为一个样式表&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于逻辑区(容器)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;div,是一个快元素&lt;/li&gt;
+  &lt;li&gt;span,是一个內联元素&lt;/li&gt;
+  &lt;li&gt;使用id属性来指定逻辑区的逻辑名&lt;/li&gt;
+  &lt;li&gt;逻辑区可以嵌套&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于列表:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;list-style-type:设置不同的列表样式
+    &lt;ul&gt;
+      &lt;li&gt;disc:默认,实心圆&lt;/li&gt;
+      &lt;li&gt;cirle:空心圆&lt;/li&gt;
+      &lt;li&gt;square:实心方块&lt;/li&gt;
+      &lt;li&gt;decimal:数字&lt;/li&gt;
+      &lt;li&gt;decimal-leading-zero:零开头的数字&lt;/li&gt;
+      &lt;li&gt;lower-roman:小写罗马字母&lt;/li&gt;
+      &lt;li&gt;upper-roman:大写罗马字母&lt;/li&gt;
+      &lt;li&gt;lower-alpha:小写英文字母&lt;/li&gt;
+      &lt;li&gt;upper-aloha:大写英文字母&lt;/li&gt;
+      &lt;li&gt;lower-greek:小写希腊字母&lt;/li&gt;
+      &lt;li&gt;lower-latin:小写拉丁字母&lt;/li&gt;
+      &lt;li&gt;upper-greek:大写拉丁字母&lt;/li&gt;
+      &lt;li&gt;none:木有编号&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;list-style-image:使用指定的图片&lt;/li&gt;
+  &lt;li&gt;list-style-position:指定序号在内部还是外部(inside/outside)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于表格&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用table标签来指定表格&lt;/li&gt;
+  &lt;li&gt;caption属性为表格的标题&lt;/li&gt;
+  &lt;li&gt;tr属性为表格的一行&lt;/li&gt;
+  &lt;li&gt;th属性为每一列的表头&lt;/li&gt;
+  &lt;li&gt;td属性为单元格,包含表格数据,每个单元格都是独立一列&lt;/li&gt;
+  &lt;li&gt;rowspan:跨越多行&lt;/li&gt;
+  &lt;li&gt;colspan:跨越多列&lt;/li&gt;
+  &lt;li&gt;使用nth-child(even/odd)伪类增加间隔背景色&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##关于表单&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;action:包含web服务的url&lt;/li&gt;
+  &lt;li&gt;method:确定表单发送到服务器的方式(POST/GET)
+    &lt;ul&gt;
+      &lt;li&gt;POST:表单数据作为请求的一部分发送,对用户不可见&lt;/li&gt;
+      &lt;li&gt;GET:表单数据追加到url后面,用户可见&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;input:不同type表示不同类型的输入方式
+    &lt;ul&gt;
+      &lt;li&gt;text:单行文本输入框&lt;/li&gt;
+      &lt;li&gt;submit:按钮&lt;/li&gt;
+      &lt;li&gt;radio:单选钮&lt;/li&gt;
+      &lt;li&gt;checkbox:复选框&lt;/li&gt;
+      &lt;li&gt;textarea:文本输入&lt;/li&gt;
+      &lt;li&gt;select:菜单(multipe)&lt;/li&gt;
+      &lt;li&gt;option:菜单项&lt;/li&gt;
+      &lt;li&gt;number:数字输入&lt;/li&gt;
+      &lt;li&gt;range:滑动条&lt;/li&gt;
+      &lt;li&gt;color:颜色选择&lt;/li&gt;
+      &lt;li&gt;date:日期输入&lt;/li&gt;
+      &lt;li&gt;email:邮件输入&lt;/li&gt;
+      &lt;li&gt;tel:电话输入&lt;/li&gt;
+      &lt;li&gt;url:链接输入&lt;/li&gt;
+      &lt;li&gt;file:文件&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;legend:提供一组元素&lt;/li&gt;
+  &lt;li&gt;filedset:也是一组元素&lt;/li&gt;
+  &lt;li&gt;passwords:密码框&lt;/li&gt;
+  &lt;li&gt;placeholder:默认文本&lt;/li&gt;
+  &lt;li&gt;Required:必须要填写的输入域&lt;/li&gt;
+  &lt;li&gt;label可以提高访问性&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
