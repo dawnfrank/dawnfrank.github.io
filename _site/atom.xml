@@ -4,7 +4,7 @@
  <title>Lanyon</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-12-11T01:04:21+08:00</updated>
+ <updated>2017-12-11T01:09:03+08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -460,6 +460,12 @@
   &lt;li&gt;placeholder:默认文本&lt;/li&gt;
   &lt;li&gt;Required:必须要填写的输入域&lt;/li&gt;
   &lt;li&gt;label可以提高访问性&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##伪元素&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;first-letter:第一个字母&lt;/li&gt;
+  &lt;li&gt;first-line:第一行&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
